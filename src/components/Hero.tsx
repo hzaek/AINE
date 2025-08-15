@@ -1,4 +1,4 @@
-import { FaRocket, FaPhone, FaArrowRight } from "react-icons/fa";
+import { FaRocket, FaPhone } from "react-icons/fa";
 
 const Hero = () => {
   return (
