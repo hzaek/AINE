@@ -67,35 +67,37 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20">
+    <section id="services" className="py-12 md:py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-8 md:mb-12 px-4">
           Our Services
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <IconComponent className="text-blue-600 text-2xl" />
+                <div className="flex items-start mb-4">
+                  <div className="bg-blue-100 p-2 md:p-3 rounded-full mr-3 md:mr-4 flex-shrink-0">
+                    <IconComponent className="text-blue-600 text-xl md:text-2xl" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800">
+                  <h3 className="text-lg md:text-xl font-bold text-gray-800 leading-tight">
                     {service.title}
                   </h3>
                 </div>
-                <p className="text-gray-600 mb-4">{service.description}</p>
+                <p className="text-gray-600 mb-4 text-sm md:text-base">
+                  {service.description}
+                </p>
                 <a
                   href="#contact"
-                  className="text-blue-500 hover:underline flex items-center"
+                  className="text-blue-500 hover:underline flex items-center text-sm md:text-base"
                 >
                   Inquire Now
                   <svg
-                    className="w-4 h-4 ml-1"
+                    className="w-3 h-3 md:w-4 md:h-4 ml-1"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
